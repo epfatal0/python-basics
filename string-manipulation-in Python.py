@@ -13,8 +13,8 @@ Called to see if she'd like to go
 To see a show, but Miss Kate said "No,
 I'll tell you what you can do:"
 """
-lyrics_split = lyrics.split()
-#print(lyrics_split)
+lyrics_split = lyrics.split("\n")
+print(lyrics_split)
 
 lyrics = """
 Katie Casey was baseball mad,
@@ -27,30 +27,51 @@ Called to see if she'd like to go
 To see a show, but Miss Kate said "No,
 I'll tell you what you can do:"
 """
-changed_values = lyrics
+changed_values = lyrics.splitlines()
 #print(changed_values)
 
 long_village_name = "Llanfairpwllgwyngyllgogerychwyrndrobwllllantysiliogogogoch"
 string_length = long_village_name
 #print(len(string_length))
 
-my_path = '   /c/Users/instructor/Downloads/Submit Relating the Nonrelational
-Assessment Download May 10, 2021 917 AM      '
-my_folders = my_path.strip()
+my_path = '   /c/Users/instructor/Downloads/Submit Relating the NonrelationalAssessment Download May 10, 2021 917 AM      '
+my_folders = my_path.strip().split("/")
 print(my_folders)
 
 composers="Beethoven,Ludwig von;Liszt,Franz;Mozart,Wolfgang;Copland,Aaron"
 # Separate the composers
-composers_split = composers
+composers = composers.replace('Mozart,Wolfgang', 'Wolfgang Mozart')
+print(composers)
+
+composers_split = composers.split(";")
+print(composers_split)
+
 # Get the third composer
 third_composer = composers_split[2]
+print(third_composer)
+
+
 # Find the comma in the name
-comma_position = third_composer
+comma_position = third_composer.find(",")
+print(comma_position)
+
+
 # Use the slicing notation to get the last name
-last_name = third_composer[]
+#ast_name = third_composer[]
+
+
 # Use the slicing notation to get the first name
-first_name = third_composer[]
+#irst_name = third_composer[]
+
+
 # Join the names to get the 3rd composer's name in "first last" format
-third_composer_name
-# Print the composer's name
-print(third_composer_name)
+first_name = "Wolfgang"
+last_name = "Mozart"
+full_name = first_name + last_name
+print(f"{first_name} {last_name}")
+print =(full_name)
+
+left_padded = ' Operators are standing by'
+right_padded = 'Call now '
+clean_strings = right_padded.strip() + '!' + left_padded.strip()
+print(clean_strings)
