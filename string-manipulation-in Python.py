@@ -76,10 +76,14 @@ right_padded = 'Call now '
 clean_strings = right_padded.strip() + '!' + left_padded.strip("'")
 print(clean_strings)
 
+#Given the student name, grade, and assignment ID, using old-style formatting, print out the following:
+#'Student name: Owen, Assignment ID: 0012, Grade: 94.75%'
+#Hint: Use %% for the percentage symbol.
+
 student_name = "Owen"
 grade = 94.75
 assignment_number = 12
-print()
+print("Student name:" , student_name + "Assignment ID:", assignment_number + "Grade:", grade)
 
 #Given the employee ID of "30", pad the string with zeroes on the left to have the employee ID appear as 6-digits "000030"
 employee_id = "30"
