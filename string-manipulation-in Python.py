@@ -69,9 +69,36 @@ first_name = "Wolfgang"
 last_name = "Mozart"
 full_name = first_name + last_name
 print(f"{first_name} {last_name}")
-print =(full_name)
+print(full_name)
 
 left_padded = ' Operators are standing by'
 right_padded = 'Call now '
-clean_strings = right_padded.strip() + '!' + left_padded.strip()
+clean_strings = right_padded.strip() + '!' + left_padded.strip("'")
 print(clean_strings)
+
+student_name = "Owen"
+grade = 94.75
+assignment_number = 12
+print()
+
+#Given the employee ID of "30", pad the string with zeroes on the left to have the employee ID appear as 6-digits "000030"
+employee_id = "30"
+employee_id_padded = employee_id.zfill(6)
+print(employee_id_padded)
+
+#Print the following statement using raw strings:
+print(r"\n/ represents a new line.\n/")
+
+#Convert the following strings based on their variable names.
+i_want_to_yell = 'yeah'
+I_NEED_TO_BE_QUIET = 'SHHHHH'
+this_is_a_title = 'this is a title'
+sWAPcASE = 'sWAPcASE'
+capitalize_this = 'capitalize this'
+#Use print and a function to achieve what the variable names suggest.
+
+print(i_want_to_yell.upper())
+print(I_NEED_TO_BE_QUIET.lower())
+print(this_is_a_title.title())
+print(sWAPcASE.swapcase())
+print(capitalize_this.capitalize())
