@@ -45,7 +45,7 @@ while True:
     grade = get_letter_grade(score)
     students.append((name, score, grade))
 
-#ask user if the want to enter another student
+#ask user if they want to enter another student
     another_student = input("\nAdd another student? (Yes / No:) ").lower()
     if another_student == "yes" or another_student == "y":
         continue
@@ -58,4 +58,4 @@ while True:
 print()
 print_summary(students) #Call print_summary function to display all students
 save_to_file(students) #save student records to grades.txt
-print("\nData saved")
+print("\nData saved to grades.txt")
