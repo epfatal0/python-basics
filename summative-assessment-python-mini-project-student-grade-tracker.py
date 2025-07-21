@@ -14,13 +14,19 @@ def get_letter_grade(score):
 #Define function to print all student records
 def print_summary(student_list):
     print("Student Summary:")
-    for name, score, grade in student_list:
+    for student in student_list:
+        name = student[0]
+        score = student[1]
+        grade = student[2]
         print(f"{name}: {score} -> {grade}")
 
 #Define function to save student records to text file
 def save_to_file(student_list):
     with open("grades.txt", "w") as file:
-        for name, score, grade in student_list:
+        for student in student_list:
+            name = student[0]
+            score = student[1]
+            grade = student[2]
             file.write(f"{name}: {score} -> {grade}\n")
 
 #Welcome message
@@ -39,10 +45,9 @@ while True:
         print("Try again. Enter a score between 0 - 100.")
         continue
 
-#Call function to get the letter grade based on the score / combine them into a tuple / add student record to end of the list
+#Call function to get the letter grade based on the score / add student record to end of the list
     grade = get_letter_grade(score)
-    student = (name, score, grade)
-    students.append(student)
+    students.append((name, score, grade))
 
 #ask user if the want to enter another student
     another_student = input("\nAdd another student? (Yes / No:) ").lower()
