@@ -1,4 +1,4 @@
-#Define function to convert score into a letter grade## Define a function to print all student records at the end
+#Define function to convert score into a letter grade
 def get_letter_grade(score):
     if score >= 90:
         return 'A'
