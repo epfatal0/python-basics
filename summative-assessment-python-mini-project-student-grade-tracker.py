@@ -14,19 +14,13 @@ def get_letter_grade(score):
 #Define function to print all student records
 def print_summary(student_list):
     print("Student Summary:")
-    for student in student_list:
-        name = student[0]
-        score = student[1]
-        grade = student[2]
+    for name, score, grade in student_list:
         print(f"{name}: {score} -> {grade}")
 
 #Define function to save student records to text file
 def save_to_file(student_list):
     with open("grades.txt", "w") as file:
-        for student in student_list:
-            name = student[0]
-            score = student[1]
-            grade = student[2]
+        for name, score, grade in student_list:
             file.write(f"{name}: {score} -> {grade}\n")
 
 #Welcome message
