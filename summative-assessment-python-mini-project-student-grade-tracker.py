@@ -14,6 +14,8 @@ def get_letter_grade(score):
 #Define function to print all student records
 def print_summary(student_list):
     print("Student Summary:")
+
+#Go through each student and pull out name, score, and grade
     for name, score, grade in student_list:
         print(f"{name}: {score} -> {grade}")
 
